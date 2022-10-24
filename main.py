@@ -1,12 +1,15 @@
-def fibo(N):
 
+def consonant(strval):
    ##################################################
    # make your code
    ##################################################
 
 
-N = 16
-gen = fibo(N)
-for v in gen:
+strval = 'Python Programming'
+mygen = consonant(strval)
+
+rlst = list(mygen)
+print(len(rlst))
+for v in rlst:
     print(v, end=' ')
 print()
