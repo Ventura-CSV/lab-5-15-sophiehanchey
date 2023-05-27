@@ -1,5 +1,6 @@
 import random
 import main
+import types
 
 
 def test_main():
@@ -12,13 +13,10 @@ def test_main():
         print(v, end=' ')
     print()
 
-    assert len(resultlst) == 14, "Wrong number of elements"
-    assert resultlst[0] == 'P', "Invalid value "
-    assert resultlst[1] == 'y', "Invalid value "
-    assert resultlst[2] == 't', "Invalid value "
-    assert resultlst[3] == 'h', "Invalid value "
-    assert resultlst[4] == 'n', "Invalid value "
-    assert resultlst[5] == ' ', "Invalid value "
+    assert isinstance(mygen, types.GeneratorType)
+    print(resultlst)
+    assert len(resultlst) == 13, "Wrong number of elements"
+    assert resultlst == ['P', 'y', 't', 'h', 'n', 'P', 'r', 'g', 'r', 'm', 'm', 'n', 'g']
 
 
 def test_fibo2():
@@ -31,12 +29,10 @@ def test_fibo2():
         print(v, end=' ')
     print()
 
+    assert isinstance(mygen, types.GeneratorType)
     assert len(resultlst) == 5, "Wrong number of elements"
-    assert resultlst[0] == 'P', "Invalid value "
-    assert resultlst[1] == 'Y', "Invalid value "
-    assert resultlst[2] == 'T', "Invalid value "
-    assert resultlst[3] == 'H', "Invalid value "
-    assert resultlst[4] == 'N', "Invalid value "
+    print(resultlst)
+    assert resultlst == ['P', 'Y', 'T', 'H', 'N']
 
 
 def test_yield():
