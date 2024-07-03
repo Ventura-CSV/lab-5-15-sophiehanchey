@@ -1,9 +1,16 @@
 
 def consonant(strval):
-   ##################################################
-   # make your code
-   ##################################################
-
+   # define vowels
+   vowels = ["a", "e", "i", "o", "u"]
+   
+   # split string into individual characters
+   listStr = [*strval]
+   
+   # use loop to check character
+   for i in listStr:
+       if i.isalpha():
+           if not i in vowels:
+               yield i
 
 def main():
     strval = 'Python Programming'
