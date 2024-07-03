@@ -8,9 +8,8 @@ def consonant(strval):
    
    # use loop to check character
    for i in listStr:
-       if i.isalpha():
-           if not i in vowels:
-               yield i
+       if i.isalpha() and not i.lower() in vowels:
+            yield i
 
 def main():
     strval = 'Python Programming'
